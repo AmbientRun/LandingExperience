@@ -1,0 +1,7 @@
+[project]
+id = "landing"
+name = "landing"
+version = "0.0.1"
+
+[messages]
+click = { fields = { origin = "Vec3", dir = "Vec3" } }
