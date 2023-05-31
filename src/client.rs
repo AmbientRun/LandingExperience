@@ -5,7 +5,6 @@ use ambient_api::{
 
 #[main]
 pub fn main() {
-    println!("----------- CLIENT STARTED");
     let camera = Entity::new()
         .with_merge(make_perspective_infinite_reverse_camera())
         .with(aspect_ratio_from_window(), EntityId::resources())
@@ -16,18 +15,13 @@ pub fn main() {
         .spawn();
 
     ambient_api::messages::WindowMouseInput::subscribe(move |ev| {
-        if !ev.pressed {
-            return;
+        if ev.pressed {
+            let ray = camera::screen_position_to_world_ray(camera, input::get().mouse_position);
+            messages::Click {
+                origin: ray.origin,
+                dir: ray.dir,
+            }
+            .send_server_unreliable();
         }
-        let input = input::get();
-        let ray = camera::screen_position_to_world_ray(camera, input.mouse_position);
-        println!("click: {:?}", ray);
-
-        messages::Click {
-            origin: ray.origin,
-            dir: ray.dir,
-        }
-        .send_server_unreliable();
     });
-    println!("----------- CLIENT STARTED done");
 }
