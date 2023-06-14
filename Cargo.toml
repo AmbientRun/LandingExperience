@@ -6,7 +6,7 @@ publish = false
 version = "0.0.1"
 
 [dependencies]
-ambient_api = { git = "https://github.com/AmbientRun/Ambient.git", rev = "2568722" }
+ambient_api = { git = "https://github.com/AmbientRun/Ambient.git", rev = "4307ff7" }
 
 [[bin]]
 name = "client_landing"
