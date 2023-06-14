@@ -9,8 +9,8 @@ pub fn main() {
         .with_merge(make_perspective_infinite_reverse_camera())
         .with(aspect_ratio_from_window(), EntityId::resources())
         .with_default(main_scene())
-        .with(translation(), Vec3::ONE * 15.)
-        .with(lookat_target(), vec3(5., 5., 0.))
+        .with(translation(), vec3(0., 12., 10.))
+        .with(lookat_target(), vec3(5., 5., -3.))
         .with(name(), "Main camera".to_string())
         .spawn();
 
