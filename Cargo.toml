@@ -18,6 +18,16 @@ name = "server_landing"
 path = "src/server.rs"
 required-features = ["server"]
 
+[[bin]]
+name = "server_sphere_mod"
+path = "src/mods/sphere/server.rs"
+required-features = ["server"]
+
+[[bin]]
+name = "server_dance_mod"
+path = "src/mods/dance/server.rs"
+required-features = ["server"]
+
 [features]
 client = ["ambient_api/client"]
 server = ["ambient_api/server"]
