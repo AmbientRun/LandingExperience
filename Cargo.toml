@@ -20,13 +20,18 @@ path = "src/server.rs"
 required-features = ["server"]
 
 [[bin]]
-name = "server_sphere_mod"
-path = "src/mods/sphere/server.rs"
+name = "server_cube_mod"
+path = "src/mods/cube/server.rs"
 required-features = ["server"]
 
 [[bin]]
 name = "server_dance_mod"
 path = "src/mods/dance/server.rs"
+required-features = ["server"]
+
+[[bin]]
+name = "server_tictactoe_mod"
+path = "src/mods/tictactoe/server.rs"
 required-features = ["server"]
 
 [features]
