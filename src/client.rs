@@ -1,6 +1,12 @@
 use ambient_api::{
-    components::core::camera::aspect_ratio_from_window,
-    concepts::make_perspective_infinite_reverse_camera, prelude::*, rand,
+    components::core::{
+        app::{main_scene, name},
+        camera::aspect_ratio_from_window,
+        transform::{lookat_target, translation},
+    },
+    concepts::make_perspective_infinite_reverse_camera,
+    prelude::*,
+    rand,
 };
 
 #[main]

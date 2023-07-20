@@ -1,7 +1,10 @@
 use std::collections::HashMap;
 
 use ambient_api::{
-    components::core::transform::translation,
+    components::core::{
+        rendering::{color, outline},
+        transform::translation,
+    },
     entity::{add_component, remove_component, set_component},
     prelude::*,
 };

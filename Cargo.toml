@@ -6,7 +6,7 @@ publish = false
 version = "0.0.1"
 
 [dependencies]
-ambient_api = { git = "https://github.com/AmbientRun/Ambient.git", rev = "4307ff7" }
+ambient_api = { git = "https://github.com/AmbientRun/Ambient.git", rev = "1e1069d" }
 itertools = "0.10"
 
 [[bin]]

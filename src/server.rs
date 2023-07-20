@@ -2,6 +2,7 @@ use ambient_api::{
     components::core::{
         physics::{cube_collider, sphere_collider},
         primitives::cube,
+        rendering::color,
         transform::translation,
     },
     concepts::make_sphere,
